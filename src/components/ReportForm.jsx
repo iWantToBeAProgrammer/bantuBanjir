@@ -34,9 +34,19 @@ const ReportForm = ({ mode = "create", initialData = null, closeModal }) => {
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(mapInstance);
 
+    const icon = L.icon({
+      iconUrl: "/marker-icon.png", // Ensure this image is in the public folder
+      shadowUrl: "/marker-shadow.png", // Ensure this image is in the public folder
+      iconSize: [25, 41], // Customize the size
+      iconAnchor: [12, 41], // Anchor the icon to the bottom
+      popupAnchor: [1, -34], // Customize popup position
+      shadowSize: [41, 41], // Size of the shadow
+    });
+
     const markerInstance = L.marker(
       [formData.coordinates.lat, formData.coordinates.lng],
       {
+        icon: icon,
         draggable: true,
       }
     ).addTo(mapInstance);
