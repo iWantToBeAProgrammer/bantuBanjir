@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import toast from "react-hot-toast";
-import { createReport, updateReportThunk } from "../redux/slices/ReportSlice";
+import { createReport, updateReportThunk } from "../redux/slices/reportSlice";
 
 const ReportForm = ({ mode = "create", initialData = null, closeModal }) => {
   const dispatch = useDispatch();

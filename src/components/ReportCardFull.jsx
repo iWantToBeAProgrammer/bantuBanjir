@@ -1,6 +1,6 @@
 import { Droplet, MapPin, Pencil, Trash } from "lucide-react";
 import { useDispatch } from "react-redux";
-import { selectReport } from "../redux/slices/ReportSlice";
+import { selectReport } from "../redux/slices/reportSlice";
 
 const ReportCardFull = ({
   imageUrl,

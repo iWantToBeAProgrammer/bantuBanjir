@@ -4,7 +4,7 @@ import ReportCardFull from "../components/ReportCardFull";
 import { useAuth } from "../contexts/AuthContext";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteReportThunk, selectReport } from "../redux/slices/ReportSlice";
+import { deleteReportThunk, selectReport } from "../redux/slices/reportSlice";
 import ReportForm from "../components/ReportForm";
 import { useState } from "react";
 import toast from "react-hot-toast";

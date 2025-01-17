@@ -7,7 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import { Toaster } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { fetchReports } from "./redux/slices/ReportSlice";
+import { fetchReports } from "./redux/slices/reportSlice";
 import axios from "axios";
 import UserReports from "./pages/UserReports";
 
@@ -35,8 +35,7 @@ function App() {
   }, [dispatch]);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>
-
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <>
@@ -56,7 +55,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route
               path="/reports"
-              element={<UserReports reports={reports}/>}
+              element={<UserReports reports={reports} />}
             />
           </Routes>
         </AuthProvider>
